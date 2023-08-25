@@ -4,7 +4,13 @@ import Light from './Light';
 
 const meta: Meta<typeof Light> ={
     component: Light,
-    title: 'Light'
+    title: 'Light',
+    argTypes: {
+        variant: {
+            control: { type: 'radio'},
+            options: ['green', 'yellow', 'red']
+        }
+    }
 }
 
 export default meta;
@@ -35,4 +41,24 @@ export const Another: Story = {
 
 export const AnotherExample: Story = {
     render: () => <Light variant='blue' />,
+};
+
+export const Grouped: Story = {
+    render: () => (
+        <div
+            style = {{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 10,
+                border: '1px solid black',
+                width: 'max-content',
+                padding: 10,
+                backgroundColor: 'black'
+            }}
+        >
+            <Light variant='red' />
+            <Light variant='yellow' />
+            <Light variant='green' />
+        </div>
+    )
 };

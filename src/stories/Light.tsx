@@ -12,7 +12,6 @@ const Light = ({variant = 'green'}: Props) => {
                 height: 50
             }}
         >
-            Light
         </div>
     );
 };
