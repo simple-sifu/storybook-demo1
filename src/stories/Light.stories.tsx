@@ -4,10 +4,10 @@ import Light from './Light';
 
 const meta: Meta<typeof Light> ={
     component: Light,
-    title: 'Light',
+    title: 'Example/Light',
     argTypes: {
         variant: {
-            control: { type: 'radio'},
+            control: { type: 'select'},
             options: ['green', 'yellow', 'red']
         }
     }
